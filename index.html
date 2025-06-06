@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/weather-icon.png" type="image/png">
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <div class="logo-container">
+        <img src="https://cdn-icons-png.flaticon.com/512/6909/6909483.png" alt="Weather App Logo" class="app-logo">
+        <h1><i class="fas fa-cloud-sun"></i> Weather Forecast</h1>
+      </div>
+      <a href="https://github.com/yourusername/weather-app" target="_blank" class="github-link">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+    </header>
+
+    <div class="search-section">
+      <input type="text" id="city-input" placeholder="Enter city name" />
+      <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+      <button id="location-btn"><i class="fas fa-location-arrow"></i> My Location</button>
+    </div>
+
+    <div id="error-message" class="error-message"></div>
+
+    <div id="loading" class="loading">
+      <div class="spinner"></div>
+    </div>
+
+    <div class="current-weather" id="current-weather">
+      <h2 id="current-city"><i class="fas fa-city"></i> City Name (Date)</h2>
+      <div class="weather-grid">
+        <div class="weather-card temp-card">
+          <p class="current-temp" id="current-temp">--</p>
+          <p class="weather-desc" id="weather-desc">--</p>
+        </div>
+        <div class="weather-card">
+          <h3><i class="fas fa-temperature-low"></i> Feels Like</h3>
+          <p id="feels-like">--</p>
+        </div>
+        <div class="weather-card">
+          <h3><i class="fas fa-wind"></i> Wind Speed</h3>
+          <p id="wind-speed">--</p>
+        </div>
+        <div class="weather-card">
+          <h3><i class="fas fa-tint"></i> Humidity</h3>
+          <p id="humidity">--</p>
+        </div>
+        <div class="weather-card">
+          <h3><i class="fas fa-arrow-up"></i> Pressure</h3>
+          <p id="pressure">--</p>
+        </div>
+        <div class="weather-card">
+          <h3><i class="fas fa-eye"></i> Visibility</h3>
+          <p id="visibility">--</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="forecast" id="forecast">
+      <h2><i class="fas fa-calendar-alt"></i> 5-Day Forecast</h2>
+      <div class="forecast-container" id="forecast-container">
+        
+      </div>
+    </div>
+
+    <footer class="app-footer">
+      <p>© 2025 ibrahims Weather App | <a href="https://github.com/yourusername/weather-app" target="_blank">View Source on GitHub</a></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
